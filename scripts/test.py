@@ -1,4 +1,4 @@
-from block import Block
+from app.models.block import Block
 from datetime import datetime
 import os
 from app.managers.common import get_data_directory
