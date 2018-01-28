@@ -13,12 +13,15 @@ class Block(object):
         :type index: str (json)
         :param prev_hash: The hash for the previous block in the chain
         :type index: str
+        :param nonce: Counter used for the proof of work implementation
+        :type index: int
         """
         self.index = kwargs.get('index')
         self.hash = kwargs.get('hash')
         self.timestamp = kwargs.get('timestamp')
         self.data = kwargs.get('data')
         self.prev_hash = kwargs.get('prev_hash')
+        self.nonce = kwargs.get('nonce')
 
     def __dict__(self):
         return {
