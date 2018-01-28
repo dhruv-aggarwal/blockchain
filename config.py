@@ -1,0 +1,1 @@
+blockchain_dir = 'data'
