@@ -1,7 +1,8 @@
 from app.models.block import Block
 from datetime import datetime
 import os
-from app.managers.common import get_data_directory
+from app.managers.common import get_data_directory, calculate_hash
+from app.managers.block import save_block
 
 
 def initialize_block():
@@ -11,6 +12,9 @@ def initialize_block():
     block_data['timestamp'] = datetime.now()
     block_data['data'] = 'First block data'
     block_data['prev_hash'] = None
+    block_data['hash'] = calculate_hash(
+        0, None, block_data['data'], block_data['timestamp'], 0
+    )
     block = Block(block_data)
     return block
 
@@ -29,4 +33,4 @@ def save_to_file():
     if os.listdir(directory) == []:
         # create first block
         first_block = initialize_block()
-        # first_block.save()
+        save_block(first_block)
