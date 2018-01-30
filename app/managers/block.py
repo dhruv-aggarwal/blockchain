@@ -1,14 +1,7 @@
-from common import get_block_filename, calculate_hash
-import json
+from common import calculate_hash
 from datetime import datetime
 from app.models.block import Block
 from config import NUM_ZEROS
-
-
-def save_block(block):
-    filename = get_block_filename(block.index)
-    with open(filename, 'w') as block_file:
-        json.dump(block.__dict__(), block_file)
 
 
 def mine(last_block):

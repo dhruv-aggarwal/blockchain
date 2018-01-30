@@ -1,2 +1,3 @@
 blockchain_dir = 'data'
-NUM_ZEROS = 4
+broadcast_blockchain_dir = 'broadcast'
+num_zeores = 5
