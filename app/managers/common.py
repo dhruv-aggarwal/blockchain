@@ -1,6 +1,8 @@
 import os
-from config import blockchain_dir
+from app import app
 import hashlib
+
+blockchain_dir = app.config['BLOCKCHAIN_DIR']
 
 
 def get_data_directory():

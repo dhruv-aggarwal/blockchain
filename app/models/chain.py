@@ -1,6 +1,3 @@
-from block import Block
-
-
 class Chain:
     def __init__(self, blocks):
         self.blocks = blocks

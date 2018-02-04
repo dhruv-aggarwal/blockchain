@@ -1,6 +1,8 @@
-from config import num_zeores
+from app import app
 import json
 from app.managers.common import get_block_filename
+
+num_zeores = app.config['NUM_ZEROS']
 
 
 class Block(object):
