@@ -1,6 +1,6 @@
 from config import num_zeores
 import json
-from common import get_block_filename
+from app.managers.common import get_block_filename
 
 
 class Block(object):
@@ -61,7 +61,7 @@ class Block(object):
     def __str__(self):
         return "Block<prev_hash: %s,hash: %s>" % (self.prev_hash, self.hash)
 
-    def is_valid_block(self):
+    def is_valid(self):
         """
         Current validity is only that the hash begins with at least NUM_ZEROS
         """
