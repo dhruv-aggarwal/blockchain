@@ -1,6 +1,8 @@
 import json
-from app.managers.sync import sync
+from app.managers.sync import sync, sync_local
 from app import app
+
+sync(True)
 
 
 @app.route('/blockchain.json', methods=['GET'])
@@ -14,7 +16,7 @@ def blockchain():
     hash
     prev_hash
     '''
-    node_blocks = sync()  # regrab the nodes if they've changed
+    node_blocks = sync_local()  # regrab the nodes if they've changed
     # Convert our blocks into dictionaries
     # so we can send them as json objects later
     python_blocks = []
