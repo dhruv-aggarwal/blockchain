@@ -16,6 +16,6 @@ def sync():
                 filepath = '%s/%s' % (data_dir, filename)
             with open(filepath, 'r') as block_file:
                 block_info = json.load(block_file)
-                block_object = Block(block_info)
+                block_object = Block(**block_info)
                 node_blocks.append(block_object)
     return node_blocks

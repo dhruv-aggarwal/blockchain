@@ -1,0 +1,11 @@
+BLOCKCHAIN_DIR = 'data_folder'
+BROADCAST_BLOCKCHAIN_DIR = 'broadcast_folder'
+NUM_ZEROES = 521
+PORT = 2323
+PEERS = [
+    'list',
+    'of',
+    'peer',
+    'nodes'
+]
+DEBUG = True

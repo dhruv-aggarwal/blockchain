@@ -1,12 +1,14 @@
 import os
-from config import DATA_DIR
+from app import app
 import hashlib
+
+blockchain_dir = app.config['BLOCKCHAIN_DIR']
 
 
 def get_data_directory():
     return os.path.abspath(
-        os.path.join(os.path.dirname(__file__), '../')
-    ) + DATA_DIR
+        os.path.join(os.path.dirname(__file__), '../../')
+    ) + '/' + blockchain_dir
 
 
 def generate_header(index, prev_hash, data, timestamp, nonce):
